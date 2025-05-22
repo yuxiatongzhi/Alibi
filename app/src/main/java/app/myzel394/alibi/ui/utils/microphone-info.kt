@@ -42,9 +42,9 @@ data class MicrophoneInfo(
 
     val type: MicrophoneType
         get() = when (deviceInfo.type) {
-            AudioDeviceInfo.TYPE_BLUETOOTH_SCO -> MicrophoneType.BLUETOOTH
-            AudioDeviceInfo.TYPE_WIRED_HEADSET -> MicrophoneType.WIRED
-            AudioDeviceInfo.TYPE_BUILTIN_MIC -> MicrophoneType.PHONE
+            AudioDeviceInfo.TYPE_BLUETOOTH_SCO -> MicrophoneType.BLUETOOTH  // 蓝牙sco
+            AudioDeviceInfo.TYPE_WIRED_HEADSET -> MicrophoneType.WIRED      // 有线耳机
+            AudioDeviceInfo.TYPE_BUILTIN_MIC -> MicrophoneType.PHONE        // 内置麦克风
             else -> MicrophoneType.OTHER
         }
 

@@ -1,6 +1,7 @@
 package app.myzel394.alibi.db
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Context
 import android.media.MediaRecorder
 import android.os.Build
@@ -17,6 +18,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import java.time.LocalDateTime
 
+@SuppressLint("UnsafeOptInUsageError")
 @Serializable
 data class AppSettings(
     val audioRecorderSettings: AudioRecorderSettings = AudioRecorderSettings.getDefaultInstance(),
@@ -158,6 +160,7 @@ data class AppSettings(
     }
 }
 
+@SuppressLint("UnsafeOptInUsageError")
 @Serializable
 data class RecordingInformation(
     val folderPath: String,
@@ -201,6 +204,7 @@ data class RecordingInformation(
     }
 }
 
+@SuppressLint("UnsafeOptInUsageError")
 @Serializable
 data class AudioRecorderSettings(
     // 320 Kbps
@@ -445,6 +449,7 @@ data class AudioRecorderSettings(
     }
 }
 
+@SuppressLint("UnsafeOptInUsageError")
 @Serializable
 data class VideoRecorderSettings(
     val targetedVideoBitRate: Int? = null,
@@ -532,6 +537,7 @@ data class VideoRecorderSettings(
     }
 }
 
+@SuppressLint("UnsafeOptInUsageError")
 @Serializable
 data class NotificationSettings(
     val title: String,
@@ -609,6 +615,7 @@ data class NotificationSettings(
     }
 }
 
+@SuppressLint("UnsafeOptInUsageError")
 @Serializable
 class AppLockSettings {
     companion object {
